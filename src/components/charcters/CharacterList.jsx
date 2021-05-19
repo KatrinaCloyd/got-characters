@@ -1,11 +1,12 @@
 import React from 'react';
 import CharacterCard from '../charcters/CharacterCard';
 import PropTypes from 'prop-types';
+import style from '../app/app.css';
 
 export default function CharacterList({ characters }) {
     return (
         <div>
-            <h2>Class of 2019!!</h2>
+            <h2 className={style.classOf}>Class of 2019!!</h2>
             <ul aria-label='list' >
                 {characters.map((char) => {
                     return (

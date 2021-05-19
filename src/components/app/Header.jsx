@@ -1,10 +1,10 @@
 import React from 'react'
-import './header.module.css'
+import './app.css'
 
 export default function Header() {
     return (
         <h1>
-            GOT Characters?
+            G.O.T. Characters?
         </h1>
     )
 }
