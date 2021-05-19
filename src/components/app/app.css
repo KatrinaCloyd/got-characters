@@ -1,0 +1,100 @@
+/* 
+    pink: #cb7bac 
+    teal: #55b6ae
+    yellow: #eaa327
+    blue: #5968a3
+*/
+
+body{
+    box-sizing: border-box;
+    font-family: 'Bangers', cursive;
+    letter-spacing: .05em;
+    background-image: url('https://assets.justinmind.com/wp-content/uploads/2018/05/top-10-worst-90s-website-designs-header.png');
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h2{
+    color: #eaa327;
+    -webkit-text-stroke: .25px black;
+    font-size: 45px;
+    letter-spacing: .05em;
+    text-shadow: 2px 3px black;
+    margin: 0px 5px 0px 40px;
+}
+
+.card{
+    background-color: #eaa327;
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cardName{
+    color: #cb7bac;
+    margin: 0px;
+    transform: rotate(-6deg);
+}
+
+.cardImg{
+    max-width: 225px;
+    transform: rotate(3deg);
+    box-shadow: 9px -6px #5968a3;
+}
+
+a:link {
+    color: #55b6ae;
+}
+
+a:visited {
+    color: #5968a3;
+}
+
+.detailPg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail{
+    background-color: #5968a3;
+    width: 500px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.detailTitle{
+    color: #55b6ae;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    letter-spacing: .06em;
+}
+
+.detailImg{
+    width: 350px;
+    transform: rotate(3deg);
+    box-shadow: 9px -6px #cb7bac;
+}
+
+h3{
+    color: white;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    letter-spacing: .06em;
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import CharacterDetail from '../components/charcters/CharacterDetail';
 import { getGOTcharacter } from '../services/apiUtil';
 import { useParams } from 'react-router-dom';
+import Loading from '../components/Loading';
 
 export default function DetailContainer() {
     const [loading, setLoading] = useState(true);
@@ -15,14 +16,7 @@ export default function DetailContainer() {
             .finally(() => { setLoading(false) })
     }, [])
 
-    if (loading) return <h2>Loading... </h2>;
+    if (loading) return <Loading />;
 
-    return (
-        <>
-            <h2>
-                Detail Container
-            </h2>
-            <CharacterDetail character={character} />
-        </>
-    )
+    return (<CharacterDetail character={character} />);
 }

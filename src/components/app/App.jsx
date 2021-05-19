@@ -7,6 +7,7 @@ import {
 import ListContainer from '../../containers/ListContainer';
 import DetailContainer from '../../containers/DetailContainer';
 import Header from './Header';
+import './app.css'
 
 export default function App() {
   return (

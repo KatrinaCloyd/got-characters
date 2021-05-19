@@ -1,11 +1,12 @@
-import React from 'react'
-import CharacterCard from '../charcters/CharacterCard'
+import React from 'react';
+import CharacterCard from '../charcters/CharacterCard';
+import PropTypes from 'prop-types';
 
 export default function CharacterList({ characters }) {
     return (
         <div>
-            <h2>GOT Character List</h2>
-            <ul aria-label='list'>
+            <h2>Class of 2019!!</h2>
+            <ul aria-label='list' >
                 {characters.map((char) => {
                     return (
                         <li key={char.id}>
@@ -21,4 +22,14 @@ export default function CharacterList({ characters }) {
             </ul>
         </div>
     )
+}
+
+CharacterList.propTypes = {
+    characters: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            firstName: PropTypes.string.isRequired,
+            lastName: PropTypes.string.isRequired,
+            image: PropTypes.string.isRequired,
+        })).isRequired,
 }

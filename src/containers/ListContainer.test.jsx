@@ -26,7 +26,7 @@ describe('Game of Thrones list page', () => {
                 <ListContainer />
             </MemoryRouter>
         );
-        screen.getByText('Loading...');
+        screen.getByAltText('Loading...');
 
         const list = await screen.findByRole('list', { name: 'list' });
         expect(list).not.toBeEmptyDOMElement();

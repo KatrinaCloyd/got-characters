@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import CharacterList from '../components/charcters/CharacterList';
+import Loading from '../components/Loading';
 import { getGOTcharactersList } from '../services/apiUtil';
 
 export default function ListContainer() {
@@ -14,14 +15,7 @@ export default function ListContainer() {
     }, [])
 
 
-    if (loading) return <h2>Loading... </h2>;
+    if (loading) return <Loading />;
 
-    return (
-        <>
-            <h2>
-                List Container
-            </h2>
-            <CharacterList characters={characters} />
-        </>
-    )
+    return (<CharacterList characters={characters} />)
 }

@@ -36,7 +36,7 @@ describe('Game of Thrones character detail page', () => {
             </MemoryRouter>
         );
 
-        screen.getByText('Loading...');
+        screen.getByAltText('Loading...');
 
         return waitFor(() => {
             screen.getByAltText('character image');
