@@ -1,42 +1,25 @@
-# LAB - Lists and Details
+# GOT characters?
 
-Get a list of things from an API and display them.
+A (limited) list of Game of Thrones Charaters with Detail pages for each and a slightly 90's theme
 
 ## APIs
 
-- [Rick And Morty](https://rickandmortyapi.com/documentation)
-- [Avatar](https://last-airbender-api.herokuapp.com/)
-- [Hey Arnold!](https://hey-arnold-api-documentation.netlify.com/)
-- [Animal Crossing](https://github.com/yaycub/acnh-villager-api)
 - [Game Of Thrones](https://thronesapi.com/api/v2/Characters)
-- [Breaking Bad](https://www.breakingbadapi.com/api/characters)
+<!-- - [Breaking Bad](https://www.breakingbadapi.com/api/characters)
 - [Harry Potter Characters](https://hp-api.herokuapp.com/)
-- [X-Men](https://xmenapiheroku.herokuapp.com/api/characters?page=1)
-
-## Requirements
+- [X-Men](https://xmenapiheroku.herokuapp.com/api/characters?page=1) -->
 
 ### List Page
 
-Display a list of things on the home page of your application. You should display
-a loading screen while fetching from the API.
+Display a list of characters on the home page with loding spinner. 
 
 ### Detail Page
 
-Have a detail page for each thing on the list page.
+Each character on the list page is cliackable to visit a character specific detail page also with loading spinner. 
 
-You should be able to click an item on the list page to get to the detail page.
-
-You should be able to navigate directly to a detail page via url.
-
-You should display a loading screen while fetching from the API.
+Detail pages can also be accesed directly via url with character id appended to the end. 
 
 ## Testing
 
 - Snapshot testing
 - test loading behavior (shows loading page and then shows content)
-
-## Rubric
-
-- Router setup 4 pts
-- List Page: 3 pts
-- Detail Page 3 pts
