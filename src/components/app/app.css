@@ -59,6 +59,7 @@ h2{
 
 .cardName{
     color: #cb7bac;
+    font-size: 40px;
     margin: 0px;
     transform: rotate(-6deg);
 }

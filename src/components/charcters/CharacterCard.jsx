@@ -9,7 +9,7 @@ export default function CharacterCard({ id, firstName, lastName, image }) {
             <Link to={`/${id}`} key={id - firstName} className={style.card}>
                 <img src={image} alt={id + firstName} className={style.cardImg} />
                 <h2 className={style.cardName}>{firstName}</h2>
-                <h2 className={style.cardName}>{lastName}</h2>
+                <h2 className={style.cardName}>{lastName === 'None' ? '' : lastName}</h2>
             </Link>
         </div>
     )
