@@ -1,20 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import CharacterDetail from '../components/charcters/CharacterDetail';
-import { getGOTcharacter } from '../services/apiUtil';
-import { useParams } from 'react-router-dom';
 import Loading from '../components/Loading';
+import { useSingleCharacter } from '../hooks/singleCharacter';
+
 
 export default function DetailContainer() {
-    const [loading, setLoading] = useState(true);
-    const [character, setCharacter] = useState(null);
 
-    const { id } = useParams();
-
-    useEffect(() => {
-        getGOTcharacter(id)
-            .then(setCharacter)
-            .finally(() => { setLoading(false) })
-    }, [])
+    const { loading, character } = useSingleCharacter();
 
     if (loading) return <Loading />;
 

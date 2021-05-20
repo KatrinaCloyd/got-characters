@@ -6,7 +6,8 @@ export const getGOTcharactersList = async () => {
         id: char.id,
         firstName: char.firstName,
         lastName: char.lastName,
-        image: char.imageUrl
+        image: char.imageUrl,
+        house: char.family
     }));
 }
 
