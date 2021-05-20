@@ -11,7 +11,7 @@ export default function Header() {
             <div className={style.linksList}>
                 <Link to={'/'}>home</Link>
                 <Link to={'/name/Stark'}>house stark</Link>
-                <Link to={'/name/Lanister'}>house lannister</Link>
+                <Link to={'/name/Lannister'}>house lannister</Link>
                 <Link to={'/name/Baratheon'}>house baratheon</Link>
             </div>
         </>

@@ -12,10 +12,37 @@ export default function HouseList() {
 
     if (loading) return <Loading />;
 
+    //NEED TO ACCOUNT FOR SPELLING MISTAKES IN LAST NAMES IN API
+    if (characters && name === 'Lannister') {
+        const chList = characters.filter(function (e) {
+            return e.house === 'Lannister' || e.house === `House Lannister` || e.house === `House Lanister`;
+        });
+
+        return (
+            <div>
+                <h2 className={style.classOf}>HOUSE {name}</h2>
+                <ul aria-label='list' >
+                    {chList.map((char) => {
+                        return (
+                            <li key={char.id}>
+                                <CharacterCard
+                                    id={char.id}
+                                    firstName={char.firstName}
+                                    lastName={char.lastName}
+                                    image={char.image}
+                                />
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
+        )
+    }
+
     if (characters) {
         const chList = characters.filter(function (e) {
-            //NEED TO ACCOUNT FOR SPELLING MISTAKES IN LAST NAMES 
-            return e.house === { name } || e.house === 'House ' + { name };
+            //NEED TO ACCOUNT FOR SPELLING MISTAKES IN LAST NAMES
+            return e.house === name || e.house === `House ${name}`;
         });
         console.log(chList);
         return (
